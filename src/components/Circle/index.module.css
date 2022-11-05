@@ -1,0 +1,42 @@
+ .circle{
+    position: absolute;
+    bottom: -50px;
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border-radius: 50%;
+    background-size: cover;
+    pointer-events: none;
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.5);
+    animation: animate 4s linear infinite;
+}
+.circle:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.25) translate(-70%,-70%);
+    background: radial-gradient(#fff,transparent);
+    border-radius: 50%;
+}    
+.circle p {
+  color: #fff;
+  font-size: 25px;
+}
+
+ @keyframes animate {
+    0%
+    {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    60%,99%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateY(-1200%);
+        opacity: 0;
+    }
+    }  
